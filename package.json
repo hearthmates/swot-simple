@@ -18,7 +18,7 @@
   "author": "Tom MacWright, Contributors, SWOT originally by Lee Reilly",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^16.2.2",
+    "browserify": "^16.5.1",
     "progress": "^2.0.0",
     "tape": "^4.9.1"
   },

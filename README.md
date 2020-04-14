@@ -61,5 +61,5 @@ swot.getInstitutionName('lreilly@cs.strath.ac.uk');
 ```
 
 
-**Returns** `null,String`, null, if the email is not educational. otherwise, a string describing the domain.
+**Returns** `boolean,String`, false, if the email is not educational. otherwise, a string with the institution name for the domain.
 
