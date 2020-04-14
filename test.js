@@ -54,8 +54,9 @@ test('swot', function(t) {
     });
 
     t.test('blacklist', function(t) {
-        ["si.edu", " si.edu ", "imposter@si.edu", "foo.si.edu", "america.edu"].forEach(function(bad) {
+        ["si.edu", "imposter@si.edu", "imposter@foo.si.edu", "america.edu", "imposter@america.edu", "imposter@foo.america.edu"].forEach(function(bad) {
             t.equal(swot.isAcademic(bad), false, bad);
+            t.equal(swot.getInstitutionName(bad), false);
         });
         t.end();
     });

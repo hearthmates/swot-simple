@@ -23,20 +23,12 @@ var blacklist = {
 function isAcademic(email) {
     if (typeof email !== 'string') return false;
 
-    var domain = email.trim().toLowerCase().substring(email.indexOf("@") + 1)
-    var parts = domain.split('.')
-    var numberOfSub = parts.length - 2 
-    while (numberOfSub >= 0) {
-        var domain = parts.slice(Math.max(parts.length - (numberOfSub + 2), 0)).join('.')
-        if(!!(domain &&
+    var domain = tldjs.getDomain(email);
+
+    return !!(domain &&
         blacklist[domain] === undefined &&
         (data[domain] !== undefined ||
-         tlds[tldjs.getPublicSuffix(domain)]))) {
-            return true
-        }
-        numberOfSub--
-    }
-    return false
+         tlds[tldjs.getPublicSuffix(domain)]));
 }
 
 /**
@@ -51,12 +43,8 @@ function isAcademic(email) {
  * // "University of Strathclyde"
  */
 function getInstitutionName(email) {
-    if (typeof email !== 'string') return false;
-
-    var parts = email.split('@'),
-        domain = tldjs.getDomain(parts[parts.length - 1]);
-
-    return data[domain];
+    var validated = isAcademic(email);
+    return validated ? data[tldjs.getDomain(email)] : false;
 }
 
 module.exports.isAcademic = isAcademic;
