@@ -1,20 +1,19 @@
 # swot-simple
 
-[![build status](https://secure.travis-ci.org/mapbox/swot-simple.png)](http://travis-ci.org/mapbox/swot-simple)
+![](https://github.com/hearthmates/swot-simple/workflows/Latest/badge.svg)
 
 Simple & fast JavaScript implementation of [Swot](https://github.com/JetBrains/swot)
 
-* only depends on tldjs
 * compiles swot data into a single json file, so bootup is fast
 * passes all of Swot's tests.
 * fast
 
 ## Install
 
-    npm install swot-simple
+    npm install hearthmates/swot-simple
 
 ## How to use
-The first thing you'll need to do after installation is generate the `swot-data.json` file. You'll need to `cd` into the `/node_modules/swot_simple` directory and run `./build.sh`. Once you've done this, you're ready to roll.
+The first thing you'll need to do after installation is generate the `swot-data.json` file, which contains all the university domain mappings we need. You'll need to `cd` into the `/node_modules/@hearthmates/swot_simple` directory and run `npm run build`. Once you've done this, you're ready to roll.
 
 ## Methods
 
@@ -62,5 +61,5 @@ swot.getInstitutionName('lreilly@cs.strath.ac.uk');
 ```
 
 
-**Returns** `boolean,String`, false, if the email is not educational. otherwise, a string describing the domain.
+**Returns** `boolean,String`, false, if the email is not educational. otherwise, a string with the institution name for the domain.
 

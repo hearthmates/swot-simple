@@ -1,22 +1,24 @@
 {
-  "name": "@mapbox/swot-simple",
+  "name": "@hearthmates/swot-simple",
   "version": "1.0.0",
-  "description": "detect whether an email address is under an edu domain",
+  "description": "University Email Verification and detect whether an email address is under an edu domain",
   "main": "index.js",
   "scripts": {
     "test": "tape test.js",
-    "build": "browserify -s swot index.js | uglifyjs -c -m > swot-simple.js",
+    "build": "./build.sh",
     "doc": "dox -r < index.js | doxme"
   },
   "keywords": [
     "swot",
     "email",
-    "edu"
+    "edu",
+    "lookup",
+    "university"
   ],
   "author": "Tom MacWright, Contributors, SWOT originally by Lee Reilly",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^16.2.2",
+    "browserify": "^16.5.1",
     "progress": "^2.0.0",
     "tape": "^4.9.1"
   },
@@ -27,6 +29,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mapbox/swot-simple.git"
+    "url": "git@github.com:hearthmates/swot-simple.git"
   }
 }
