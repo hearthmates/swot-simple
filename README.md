@@ -1,6 +1,6 @@
 # swot-simple
 
-![](https://github.com/hearthmates/swot-simple/workflows/Latest/badge.svg)
+![Latest](https://github.com/hearthmates/swot-simple/workflows/Latest/badge.svg)
 
 Simple & fast JavaScript implementation of [Swot](https://github.com/JetBrains/swot)
 
