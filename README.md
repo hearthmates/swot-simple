@@ -1,6 +1,6 @@
 # swot-simple
 
-![Latest](https://github.com/hearthmates/swot-simple/workflows/Latest/badge.svg)
+![Latest](https://github.com/hearthmates/swot-simple/workflows/Latest/badge.svg)     Swot Database Last Updated: `2020-04-15`
 
 Simple & fast JavaScript implementation of [Swot](https://github.com/JetBrains/swot)
 
@@ -12,16 +12,14 @@ Simple & fast JavaScript implementation of [Swot](https://github.com/JetBrains/s
 
     npm install hearthmates/swot-simple
 
-## How to use
-The first thing you'll need to do after installation is generate the `swot-data.json` file, which contains all the university domain mappings we need. You'll need to `cd` into the `/node_modules/@hearthmates/swot_simple` directory and run `npm run build`. For example:
+## Build 
+Swot-Simple works right out of the box. However, you may want to manually update or rebuild the `swot-data.json` file, which contains all the university domain mappings we need. For this, you'll need to run `npm run build` from the swot-simple directory. From your node project directory for example:
 
     npm --prefix ./node_modules/@hearthmates/swot-simple/ run build
 
-For your convenience, the build will also produce a browser-compatible bundle called `simple-swot.json`, just drop it into your html and you're done.
+For your convenience, the build will also produce a browser-compatible bundle called `swot-simple.json`, just drop it into your html and you're done.
 
     <script src="simple-swot.js"></script>
-
-Now you're ready to roll.
 
 ## Methods
 
