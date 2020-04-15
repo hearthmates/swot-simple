@@ -1,5 +1,6 @@
 var data = require('./swot-data.json'),
-    tldjs = require('tldjs');
+    tldjs = require('tldjs')
+    assert = require('assert');
 
 var tlds = require('./tlds.json').reduce(function(memo, _) {
     memo[_] = true;
@@ -10,6 +11,13 @@ var blacklist = {
     'si.edu': true,
     'america.edu': true
 };
+
+function isEmpty(obj) {
+  return Object.keys(obj).length === 0 && obj.constructor === Object;
+}
+
+// Check that the SWOT database was generated
+assert(!isEmpty(data), "Simple-Swot: Swot database is empty. Try running `npm run build` to initialize Swot database.");
 
 /**
  * Check an email for whether it is from an educational domain or not.
